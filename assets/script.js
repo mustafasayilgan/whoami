@@ -75,8 +75,65 @@ function bindQaControls() {
   });
 }
 
+function bindProjectModal() {
+  const modal = qs("[data-modal]");
+  if (!modal) return;
+
+  const titleEl = qs("#modalTitle", modal);
+  const subtitleEl = qs("[data-modal-subtitle]", modal);
+  const bodyEl = qs("[data-modal-body]", modal);
+  const closeEls = qsa("[data-close-modal]", modal);
+
+  let lastActive = null;
+
+  function openFrom(btn) {
+    lastActive = document.activeElement;
+    const title = btn.getAttribute("data-modal-title") || "";
+    const subtitle = btn.getAttribute("data-modal-subtitle") || "";
+    const body = btn.getAttribute("data-modal-body") || "";
+
+    if (titleEl) titleEl.textContent = title;
+    if (subtitleEl) subtitleEl.textContent = subtitle;
+    if (bodyEl) bodyEl.textContent = body;
+
+    modal.setAttribute("data-open", "true");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    const focusTarget = qs("[data-close-modal]", modal) || qs("button, a, [tabindex]", modal);
+    focusTarget?.focus?.();
+  }
+
+  function close() {
+    modal.setAttribute("data-open", "false");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastActive && typeof lastActive.focus === "function") lastActive.focus();
+    lastActive = null;
+  }
+
+  qsa("[data-open-modal]").forEach((btn) => {
+    btn.addEventListener("click", () => openFrom(btn));
+  });
+
+  closeEls.forEach((el) => el.addEventListener("click", close));
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.getAttribute("data-open") === "true") {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  modal.addEventListener("click", (e) => {
+    const card = qs(".modal-card", modal);
+    if (card && !card.contains(e.target)) close();
+  });
+}
+
 setYear();
 bindCopy();
 bindPrint();
 bindQaControls();
+bindProjectModal();
 

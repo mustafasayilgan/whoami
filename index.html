@@ -21,7 +21,36 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
 
-    <header class="site-header">
+    <div class="topbar" role="navigation" aria-label="Primary">
+      <div class="container topbar-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">mustafa / devops</span>
+        </a>
+        <div class="topbar-links">
+          <a href="#highlights">Highlights</a>
+          <a href="#projects">Projects</a>
+          <a href="#repos">Repos</a>
+          <a href="#certs">Certs</a>
+          <a href="#qa">Q&amp;A</a>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-ghost btn-link" href="https://github.com/mustafasayilgan" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a
+            class="btn btn-ghost btn-link"
+            href="https://www.linkedin.com/in/mustafa-sayilgan/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
       <div class="container header-grid">
         <div>
           <p class="eyebrow">Cloud / DevOps Engineer</p>
@@ -34,6 +63,21 @@
             <span class="pill">Terraform Associate</span>
             <span class="pill">AWS SAA</span>
             <span class="pill">GCP PCA</span>
+          </div>
+
+          <div class="mini-cards" aria-label="Summary highlights">
+            <div class="mini">
+              <div class="mini-k">Focus</div>
+              <div class="mini-v">K8s · IaC · GitOps</div>
+            </div>
+            <div class="mini">
+              <div class="mini-k">Strength</div>
+              <div class="mini-v">Delivery &amp; reliability</div>
+            </div>
+            <div class="mini">
+              <div class="mini-k">Cloud</div>
+              <div class="mini-v">AWS · GCP · Azure · DO</div>
+            </div>
           </div>
         </div>
 
@@ -88,7 +132,7 @@
     </header>
 
     <main id="content" class="container content">
-      <section class="grid-2">
+      <section class="grid-2" id="highlights">
         <div class="card">
           <h2 class="card-title">Core strengths</h2>
           <ul class="list">
@@ -140,7 +184,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="card" id="projects">
         <div class="section-head">
           <h2 class="card-title">Selected projects &amp; outcomes</h2>
           <p class="muted">A few concrete things I’ve built/operated (details available during interviews).</p>
@@ -148,7 +192,19 @@
 
         <div class="projects">
           <article class="project">
-            <h3 class="project-title">Production Kubernetes platforms</h3>
+            <div class="project-head">
+              <h3 class="project-title">Production Kubernetes platforms</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Production Kubernetes platforms"
+                data-modal-subtitle="Cluster buildouts, Helm standardization, safer rollouts"
+                data-modal-body="Built Kubernetes clusters from scratch across environments and standardized deployments using Helm and shared patterns. Containerized legacy apps and defined repeatable rollout and config strategies that reduce drift and make releases predictable."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Built clusters from scratch across environments; containerized legacy apps; authored Helm charts and
               standardized deployment patterns.
@@ -161,7 +217,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">CI/CD + GitOps migration</h3>
+            <div class="project-head">
+              <h3 class="project-title">CI/CD + GitOps migration</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="CI/CD + GitOps migration"
+                data-modal-subtitle="Auditable deployments, less manual drift"
+                data-modal-body="Implemented CI/CD workflows and introduced GitOps via Argo CD so the desired state lives in Git and deployments are reconciled continuously. This improves traceability (PRs), enables safer rollbacks, and reduces environment drift."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Implemented CI/CD workflows and introduced GitOps with Argo CD for consistent, auditable deployments.
               Reduced manual drift and improved rollout reliability.
@@ -174,7 +242,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">Autoscaling &amp; capacity efficiency</h3>
+            <div class="project-head">
+              <h3 class="project-title">Autoscaling &amp; capacity efficiency</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Autoscaling & capacity efficiency"
+                data-modal-subtitle="Event-driven scaling with KEDA"
+                data-modal-body="Implemented KEDA for event-driven autoscaling to improve workload responsiveness while controlling resource usage. Combined with sane requests/limits and deployment best-practices to keep platforms stable under load spikes."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Implemented event-driven autoscaling with KEDA to improve responsiveness and resource efficiency.
             </p>
@@ -186,7 +266,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">Secrets, SSO, and perimeter security</h3>
+            <div class="project-head">
+              <h3 class="project-title">Secrets, SSO, and perimeter security</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Secrets, SSO, and perimeter security"
+                data-modal-subtitle="Vault + OIDC/SSO + Cloudflare controls"
+                data-modal-body="Operated Vault for secure secret management and injection into Kubernetes. Implemented OIDC/SSO for internal tooling using Microsoft Entra ID and/or Keycloak. Hardened the perimeter with Cloudflare WAF, Zero Trust, and rate limiting."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Operated Vault for secrets injection; implemented OIDC/SSO for tooling (e.g., Argo CD/Grafana) using Entra ID
               or Keycloak; deployed Cloudflare WAF/Zero Trust and rate limiting.
@@ -200,7 +292,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">Observability &amp; incident readiness</h3>
+            <div class="project-head">
+              <h3 class="project-title">Observability &amp; incident readiness</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Observability & incident readiness"
+                data-modal-subtitle="Metrics, logs, traces, and actionable alerts"
+                data-modal-body="Built dashboards and alerting (Prometheus/Grafana/Alertmanager), centralized logging (Graylog), and added synthetic monitoring (Uptime Kuma). Used New Relic for infra monitoring and incident analysis; added OpenTelemetry where it provides real signal."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Built dashboards and alerting (Prometheus/Grafana/Alertmanager), added OpenTelemetry where it makes sense,
               and used New Relic for infra monitoring and incident analysis; centralized logs with Graylog.
@@ -215,7 +319,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">OpsCentral (internal Terraform automation)</h3>
+            <div class="project-head">
+              <h3 class="project-title">OpsCentral (internal Terraform automation)</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="OpsCentral (internal Terraform automation)"
+                data-modal-subtitle="Self-serve provisioning with guardrails"
+                data-modal-body="Developed an internal tool to automate Terraform-based provisioning in a consistent, auditable way. The goal: reduce ops toil, improve standardization, and make common requests safe to run through a controlled workflow."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Developed an internal tool to automate resource provisioning through Terraform (self-serve, standardized, auditable).
             </p>
@@ -226,7 +342,19 @@
           </article>
 
           <article class="project">
-            <h3 class="project-title">Slack automation bots</h3>
+            <div class="project-head">
+              <h3 class="project-title">Slack automation bots</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Slack automation bots"
+                data-modal-subtitle="IAM access + incident workflow automation"
+                data-modal-body="Built Python Slackbots for time-based IAM access and incident-channel workflows to reduce manual effort and standardize on-call operations. Focused on small automations that remove repetitive steps."
+              >
+                View details
+              </button>
+            </div>
             <p class="project-body">
               Built Python Slackbots for time-based IAM access and incident channel workflows to reduce toil.
             </p>
@@ -239,9 +367,44 @@
         </div>
       </section>
 
-      <section class="grid-2">
+      <section class="grid-2" id="repos">
         <div class="card">
-          <h2 class="card-title">Certifications</h2>
+          <h2 class="card-title">Featured repos</h2>
+          <p class="muted">A few public projects that help show how I work.</p>
+          <div class="repo-grid" aria-label="Featured GitHub repositories">
+            <a class="repo" href="https://github.com/mustafasayilgan/k8scicd" target="_blank" rel="noreferrer">
+              <div class="repo-top">
+                <span class="repo-name">k8scicd</span>
+                <span class="repo-pill">K8s / CI</span>
+              </div>
+              <div class="repo-desc">Kubernetes + CI/CD oriented work.</div>
+            </a>
+            <a class="repo" href="https://github.com/mustafasayilgan/k8sDemo-master" target="_blank" rel="noreferrer">
+              <div class="repo-top">
+                <span class="repo-name">k8sDemo-master</span>
+                <span class="repo-pill">Demo</span>
+              </div>
+              <div class="repo-desc">A demo repo to showcase Kubernetes basics and deployment flow.</div>
+            </a>
+            <a class="repo" href="https://github.com/mustafasayilgan/nodeapp" target="_blank" rel="noreferrer">
+              <div class="repo-top">
+                <span class="repo-name">nodeapp</span>
+                <span class="repo-pill">App</span>
+              </div>
+              <div class="repo-desc">Simple app repo for containerization / pipeline examples.</div>
+            </a>
+            <a class="repo" href="https://github.com/mustafasayilgan/flaskapp" target="_blank" rel="noreferrer">
+              <div class="repo-top">
+                <span class="repo-name">flaskapp</span>
+                <span class="repo-pill">App</span>
+              </div>
+              <div class="repo-desc">Flask app used for deployment and automation patterns.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title" id="certs">Certifications</h2>
           <ul class="list">
             <li><strong>CKA</strong> — Certified Kubernetes Administrator</li>
             <li><strong>CKAD</strong> — Certified Kubernetes Application Developer</li>
@@ -252,7 +415,7 @@
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card" aria-label="Background">
           <h2 class="card-title">Background</h2>
           <ul class="list">
             <li><strong>Education</strong>: Bachelor’s degree — Civil Engineering (Usak University)</li>
@@ -269,7 +432,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="card" id="qa">
         <div class="section-head">
           <h2 class="card-title">Hiring manager Q&amp;A (quick)</h2>
           <p class="muted">Short answers to common screening questions (expand for details).</p>
@@ -354,6 +517,23 @@
         </p>
       </footer>
     </main>
+
+    <div class="modal" data-modal aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head">
+          <div>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-subtitle" data-modal-subtitle></div>
+          </div>
+          <button class="iconbtn" type="button" data-close-modal aria-label="Close dialog">✕</button>
+        </div>
+        <div class="modal-body" data-modal-body></div>
+        <div class="modal-foot">
+          <button class="btn btn-ghost" type="button" data-close-modal>Close</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
