@@ -132,6 +132,64 @@
     </header>
 
     <main id="content" class="container content">
+      <section class="stats-bar" aria-label="At a glance">
+        <div class="stat">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Years in DevOps</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Cloud providers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Tools in production</div>
+        </div>
+      </section>
+
+      <section class="card" id="timeline-section">
+        <h2 class="card-title">Experience timeline</h2>
+        <p class="muted" style="margin-bottom: 16px;">Career progression (company names omitted intentionally).</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot tl-active"></div>
+            <div class="tl-content">
+              <div class="tl-date">Jun 2025 — Present</div>
+              <div class="tl-role">Cloud / DevOps Engineer</div>
+              <div class="tl-desc">Full ownership of K8s platforms, CI/CD, GitOps, IaC, secrets management, observability, and security hardening. Built internal Self Service IDP.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">Dec 2024 — Jun 2025</div>
+              <div class="tl-role">Cloud / DevOps Engineer</div>
+              <div class="tl-desc">Managed CI/CD landscape and SRE operations. Terraform IaC, JFrog Artifactory administration, Bash automation, and proactive monitoring.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">Mar 2022 — Dec 2024</div>
+              <div class="tl-role">Cloud / DevOps Engineer</div>
+              <div class="tl-desc">Multi-cloud K8s (GCP, Azure, AWS, Huawei). Full cluster migration, GitOps adoption, SSO with Keycloak, observability with Prometheus/Grafana/OTel. Built Slackbots for IAM and incidents.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">Feb 2021 — Feb 2022</div>
+              <div class="tl-role">Jr. DevOps Engineer</div>
+              <div class="tl-desc">Docker/K8s, Jenkins CI/CD, Prometheus/Grafana monitoring, ELK stack logging, Zabbix alerting, GCP hands-on.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="grid-2" id="highlights">
         <div class="card">
           <h2 class="card-title">Core strengths</h2>
@@ -206,20 +264,20 @@
                 type="button"
                 data-open-modal
                 data-modal-title="Production Kubernetes platforms"
-                data-modal-subtitle="Cluster buildouts, Helm standardization, safer rollouts"
-                data-modal-body="Built Kubernetes clusters from scratch across environments and standardized deployments using Helm and shared patterns. Containerized legacy apps and defined repeatable rollout and config strategies that reduce drift and make releases predictable."
+                data-modal-subtitle="Cluster buildouts, Helm standardization, manifest migration"
+                data-modal-body="Built Kubernetes clusters from scratch across environments and standardized deployments using Helm.\n\nMigrated raw YAML manifests into Helm charts to make deployments templated, version-controlled, and environment-aware. Containerized legacy apps and defined repeatable rollout strategies that reduce drift and make releases predictable."
               >
                 View details
               </button>
             </div>
             <p class="project-body">
-              Built clusters from scratch across environments; containerized legacy apps; authored Helm charts and
-              standardized deployment patterns.
+              Built clusters from scratch; migrated raw YAML manifests into Helm charts; containerized legacy apps.
             </p>
             <ul class="project-tags">
               <li>Kubernetes</li>
               <li>Helm</li>
               <li>Docker</li>
+              <li>YAML → Helm</li>
             </ul>
           </article>
 
@@ -350,6 +408,30 @@
 
           <article class="project">
             <div class="project-head">
+              <h3 class="project-title">Full Kubernetes cluster migration</h3>
+              <button
+                class="chipbtn"
+                type="button"
+                data-open-modal
+                data-modal-title="Full Kubernetes cluster migration"
+                data-modal-subtitle="Cross-cloud migration with zero downtime"
+                data-modal-body="Orchestrated a full Kubernetes cluster migration from one cloud provider to another (NGN Cloud → Huawei Cloud).\n\nPlanned and executed workload migration, DNS cutover, and validation across environments to ensure continuity."
+              >
+                View details
+              </button>
+            </div>
+            <p class="project-body">
+              Orchestrated a complete Kubernetes cluster migration across cloud providers with minimal downtime.
+            </p>
+            <ul class="project-tags">
+              <li>Kubernetes</li>
+              <li>Multi-cloud</li>
+              <li>Migration</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
               <h3 class="project-title">Slack automation bots</h3>
               <button
                 class="chipbtn"
@@ -470,12 +552,54 @@
               </ul>
             </div>
           </details>
+
+          <details>
+            <summary>How do you handle incidents?</summary>
+            <div class="qa-body">
+              <ul class="list">
+                <li><strong>Detection</strong>: actionable alerts (Prometheus/Alertmanager/New Relic), synthetic monitoring (Uptime Kuma).</li>
+                <li><strong>Response</strong>: standardized incident channels (Slackbot), clear roles, and runbooks.</li>
+                <li><strong>Post-mortem</strong>: blameless review, timeline reconstruction, and concrete action items to prevent recurrence.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>What's your multi-cloud experience?</summary>
+            <div class="qa-body">
+              <ul class="list">
+                <li><strong>Providers</strong>: hands-on with AWS, GCP, Azure, DigitalOcean, and Huawei Cloud.</li>
+                <li><strong>Migration</strong>: orchestrated full K8s cluster migration across cloud providers.</li>
+                <li><strong>Strategy</strong>: Terraform abstractions to keep infra portable; avoid deep vendor lock-in where practical.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do you reduce toil and manual work?</summary>
+            <div class="qa-body">
+              <ul class="list">
+                <li><strong>Automation</strong>: Bash/Python scripts for repetitive tasks, Slackbots for IAM and incident workflows.</li>
+                <li><strong>Self-serve</strong>: built an internal IDP (OpsCentral) so teams can provision resources safely without SRE tickets.</li>
+                <li><strong>Pipelines</strong>: centralized Helm chart pipelines, GitOps reconciliation to eliminate manual deploys.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <h2 class="cta-title">Interested in working together?</h2>
+        <p class="cta-desc">I'm open to Cloud/DevOps roles (remote-first). Let's have a quick chat about how I can help your team.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:mustafasayilgann@gmail.com">Send me an email</a>
+          <a class="btn btn-ghost btn-link" href="https://www.linkedin.com/in/mustafa-sayilgan/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
         </div>
       </section>
 
       <footer class="footer">
         <p class="muted">
-          © <span data-year></span> Mustafa Sayilgan • Built for GitHub Pages •
+          © <span data-year></span> Mustafa Sayilgan •
           <button class="linklike" type="button" data-expand-all>Expand all Q&amp;A</button>
           <span aria-hidden="true">·</span>
           <button class="linklike" type="button" data-collapse-all>Collapse all</button>
