@@ -1,18 +1,17 @@
 /* Intentionally simple: fast, readable, printable. */
 :root {
-  --bg: #0b0f17;
-  --card: rgba(255, 255, 255, 0.06);
-  --card2: rgba(255, 255, 255, 0.04);
-  --card3: rgba(255, 255, 255, 0.02);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.72);
-  --faint: rgba(255, 255, 255, 0.56);
-  --line: rgba(255, 255, 255, 0.12);
+  --bg: #070b14;
+  --surface: #0b1222;
+  --surface2: #0e1930;
+  --text: #eaf0ff;
+  --muted: rgba(234, 240, 255, 0.72);
+  --faint: rgba(234, 240, 255, 0.58);
+  --line: rgba(234, 240, 255, 0.12);
   --brand: #74c0fc;
   --brand2: #a78bfa;
   --brand3: #34d399;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow2: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --shadow: 0 12px 34px rgba(0, 0, 0, 0.42);
+  --shadow2: 0 20px 60px rgba(0, 0, 0, 0.52);
   --radius: 16px;
   --radius2: 12px;
   --max: 1080px;
@@ -23,16 +22,15 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f8fafc;
-    --card: rgba(2, 6, 23, 0.05);
-    --card2: rgba(2, 6, 23, 0.04);
-    --card3: rgba(2, 6, 23, 0.03);
-    --text: rgba(2, 6, 23, 0.92);
-    --muted: rgba(2, 6, 23, 0.72);
-    --faint: rgba(2, 6, 23, 0.56);
-    --line: rgba(2, 6, 23, 0.12);
-    --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
-    --shadow2: 0 18px 50px rgba(2, 6, 23, 0.12);
+    --bg: #f7f9ff;
+    --surface: #ffffff;
+    --surface2: #f1f5ff;
+    --text: #0a1020;
+    --muted: rgba(10, 16, 32, 0.70);
+    --faint: rgba(10, 16, 32, 0.55);
+    --line: rgba(10, 16, 32, 0.12);
+    --shadow: 0 10px 30px rgba(10, 16, 32, 0.08);
+    --shadow2: 0 18px 50px rgba(10, 16, 32, 0.12);
   }
 }
 
@@ -61,9 +59,8 @@ body {
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(1200px 600px at 20% 5%, rgba(116, 192, 252, 0.25), transparent 60%),
-    radial-gradient(1000px 600px at 90% 0%, rgba(167, 139, 250, 0.22), transparent 55%),
-    radial-gradient(900px 500px at 50% 20%, rgba(52, 211, 153, 0.14), transparent 55%),
+  background: radial-gradient(1000px 500px at 18% 8%, rgba(116, 192, 252, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 88% 0%, rgba(167, 139, 250, 0.16), transparent 58%),
     var(--bg);
   color: var(--text);
 }
@@ -94,8 +91,8 @@ a:hover {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(8px);
 }
 
 .topbar-inner {
@@ -241,7 +238,7 @@ a:hover {
 
 .pill {
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, var(--card), var(--card2));
+  background: color-mix(in srgb, var(--surface2) 92%, transparent);
   border-radius: 999px;
   padding: 8px 10px;
   font-size: 13px;
@@ -288,7 +285,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius2);
   padding: 12px 12px;
-  background: linear-gradient(135deg, var(--card), var(--card3));
+  background: var(--surface);
 }
 
 .mini-k {
@@ -322,7 +319,7 @@ a:hover {
 
 .card {
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, var(--card), var(--card2));
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 18px 18px;
   box-shadow: var(--shadow);
@@ -438,7 +435,7 @@ a:hover {
   padding: 7px 9px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface2);
   user-select: none;
   letter-spacing: -0.02em;
 }
@@ -468,7 +465,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius2);
   padding: 14px 14px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  background: var(--surface);
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
@@ -510,14 +507,14 @@ a:hover {
   padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(116, 192, 252, 0.08);
+  background: color-mix(in srgb, var(--surface2) 88%, transparent);
   user-select: none;
 }
 
 .chipbtn {
   appearance: none;
   border: 1px solid var(--line);
-  background: rgba(167, 139, 250, 0.10);
+  background: color-mix(in srgb, var(--surface2) 84%, transparent);
   color: var(--text);
   border-radius: 999px;
   padding: 6px 9px;
@@ -529,7 +526,7 @@ a:hover {
 }
 
 .chipbtn:hover {
-  background: rgba(167, 139, 250, 0.16);
+  background: color-mix(in srgb, var(--surface2) 78%, var(--brand2) 22%);
 }
 
 .repo-grid {
@@ -550,7 +547,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: var(--radius2);
   padding: 12px 12px;
-  background: linear-gradient(135deg, var(--card), var(--card3));
+  background: var(--surface);
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -579,7 +576,7 @@ a:hover {
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--muted);
-  background: rgba(52, 211, 153, 0.10);
+  background: color-mix(in srgb, var(--surface2) 82%, var(--brand3) 18%);
 }
 
 .repo-desc {
@@ -662,7 +659,7 @@ a:hover {
 .modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.68);
 }
 
 .modal-card {
@@ -670,7 +667,7 @@ a:hover {
   width: min(760px, calc(100vw - 24px));
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: linear-gradient(135deg, var(--card), var(--card3));
+  background: var(--surface);
   box-shadow: var(--shadow2);
   padding: 16px 16px;
   animation: pop 140ms ease-out;
