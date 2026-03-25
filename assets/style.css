@@ -16,8 +16,9 @@
   --radius: 16px;
   --radius2: 12px;
   --max: 1080px;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
+  --font: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: light) {
@@ -55,8 +56,11 @@ body {
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
+  font-family: var(--font);
+  line-height: 1.62;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(1200px 600px at 20% 5%, rgba(116, 192, 252, 0.25), transparent 60%),
     radial-gradient(1000px 600px at 90% 0%, rgba(167, 139, 250, 0.22), transparent 55%),
     radial-gradient(900px 500px at 50% 20%, rgba(52, 211, 153, 0.14), transparent 55%),
@@ -217,12 +221,14 @@ a:hover {
   font-size: clamp(34px, 5vw, 56px);
   line-height: 1.03;
   letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 .subtitle {
   margin: 12px 0 14px 0;
   color: var(--muted);
   font-size: 16px;
+  line-height: 1.7;
   max-width: 64ch;
 }
 
@@ -241,6 +247,28 @@ a:hover {
   font-size: 13px;
   color: var(--text);
   user-select: none;
+}
+
+.contact-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.badge {
+  border: 1px solid var(--line);
+  background: rgba(52, 211, 153, 0.10);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  user-select: none;
+}
+
+.badge2 {
+  background: rgba(167, 139, 250, 0.10);
 }
 
 .mini-cards {
@@ -311,6 +339,7 @@ a:hover {
   margin: 0 0 12px 0;
   font-size: 16px;
   letter-spacing: -0.01em;
+  font-weight: 800;
 }
 
 .muted {
@@ -411,6 +440,7 @@ a:hover {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
   user-select: none;
+  letter-spacing: -0.02em;
 }
 
 .section-head {
