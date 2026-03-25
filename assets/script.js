@@ -90,7 +90,8 @@ function bindProjectModal() {
     lastActive = document.activeElement;
     const title = btn.getAttribute("data-modal-title") || "";
     const subtitle = btn.getAttribute("data-modal-subtitle") || "";
-    const body = btn.getAttribute("data-modal-body") || "";
+    const bodyRaw = btn.getAttribute("data-modal-body") || "";
+    const body = bodyRaw.replaceAll("\\n", "\n");
 
     if (titleEl) titleEl.textContent = title;
     if (subtitleEl) subtitleEl.textContent = subtitle;
