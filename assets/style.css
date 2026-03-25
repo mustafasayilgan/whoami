@@ -39,6 +39,15 @@
   box-sizing: border-box;
 }
 
+/* Make accidental selections not show (for screenshots). */
+::selection {
+  background: transparent;
+}
+
+::-moz-selection {
+  background: transparent;
+}
+
 html,
 body {
   height: 100%;
@@ -231,6 +240,7 @@ a:hover {
   padding: 8px 10px;
   font-size: 13px;
   color: var(--text);
+  user-select: none;
 }
 
 .mini-cards {
@@ -357,6 +367,7 @@ a:hover {
   padding: 9px 11px;
   font-weight: 600;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn:hover {
@@ -399,6 +410,7 @@ a:hover {
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
+  user-select: none;
 }
 
 .section-head {
@@ -469,6 +481,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(116, 192, 252, 0.08);
+  user-select: none;
 }
 
 .chipbtn {
@@ -482,6 +495,7 @@ a:hover {
   font-size: 12px;
   cursor: pointer;
   white-space: nowrap;
+  user-select: none;
 }
 
 .chipbtn:hover {
