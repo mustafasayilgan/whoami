@@ -311,6 +311,10 @@ a:hover {
   gap: 18px;
 }
 
+.span-2 {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -708,6 +712,7 @@ a:hover {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 .modal-foot {

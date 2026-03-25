@@ -138,11 +138,12 @@
           <h2 class="card-title">Core strengths</h2>
           <ul class="list">
             <li><strong>Platform engineering</strong>: Kubernetes clusters (prod/stage/dev), Helm, ingress, autoscaling.</li>
-            <li><strong>Delivery</strong>: CI/CD with GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines.</li>
+            <li><strong>Delivery</strong>: CI/CD with GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines, Jenkins.</li>
             <li><strong>GitOps</strong>: Argo CD for cluster state &amp; app deployments.</li>
             <li><strong>IaC</strong>: Terraform to standardize &amp; automate cloud environments.</li>
             <li><strong>Security</strong>: Vault secrets, OIDC/SSO (Microsoft Entra ID, Keycloak), Cloudflare Zero Trust/WAF.</li>
-            <li><strong>Observability</strong>: Prometheus/Grafana/Alertmanager, OpenTelemetry, New Relic, centralized logs.</li>
+            <li><strong>Observability</strong>: Prometheus/Grafana/Alertmanager, OpenTelemetry, New Relic, Graylog, synthetic monitoring.</li>
+            <li><strong>Ops &amp; reliability</strong>: backups/restore strategies, artifact management (JFrog Artifactory), incident workflows.</li>
           </ul>
         </div>
 
@@ -160,6 +161,7 @@
             <span class="tag">GitLab CI</span>
             <span class="tag">Azure DevOps</span>
             <span class="tag">Bitbucket Pipelines</span>
+            <span class="tag">Jenkins</span>
             <span class="tag">JFrog Artifactory</span>
             <span class="tag">Keycloak</span>
             <span class="tag">OIDC</span>
@@ -171,11 +173,16 @@
             <span class="tag">Graylog</span>
             <span class="tag">Uptime Kuma</span>
             <span class="tag">SonarQube</span>
+            <span class="tag">Zabbix</span>
+            <span class="tag">Elasticsearch</span>
+            <span class="tag">Logstash</span>
+            <span class="tag">Kibana</span>
             <span class="tag">Cloudflare WAF</span>
             <span class="tag">AWS</span>
             <span class="tag">GCP</span>
             <span class="tag">Azure</span>
             <span class="tag">DigitalOcean</span>
+            <span class="tag">Huawei Cloud</span>
             <span class="tag">Bash</span>
             <span class="tag">Python</span>
             <span class="tag">MySQL</span>
@@ -350,14 +357,14 @@
                 type="button"
                 data-open-modal
                 data-modal-title="Slack automation bots"
-                data-modal-subtitle="IAM access + incident workflow automation"
-                data-modal-body="Built Python Slackbots for time-based IAM access and incident-channel workflows to reduce manual effort and standardize on-call operations. Focused on small automations that remove repetitive steps."
+                data-modal-subtitle="Two bots: IAM access + incident channels"
+                data-modal-body="Built two small Python Slackbots to reduce ops toil:\n\n1) Time-based IAM permissions bot (GCP): grants and revokes access on a schedule to keep permissions least-privilege.\n\n2) Incident channel bot: standardizes incident channels (creation, naming, prompts/roles) to speed up response and reduce coordination overhead."
               >
                 View details
               </button>
             </div>
             <p class="project-body">
-              Built Python Slackbots for time-based IAM access and incident channel workflows to reduce toil.
+              Built two Python Slackbots: one for time-based IAM permissions and one for incident-channel workflows.
             </p>
             <ul class="project-tags">
               <li>Python</li>
@@ -416,7 +423,7 @@
           </ul>
         </div>
 
-        <div class="card" aria-label="Background">
+        <div class="card span-2" aria-label="Background">
           <h2 class="card-title">Background</h2>
           <ul class="list">
             <li><strong>Education</strong>: Bachelor’s degree — Civil Engineering (Usak University)</li>
